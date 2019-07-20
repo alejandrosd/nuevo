@@ -119,7 +119,7 @@ public lienzo(){
             prueba.setLocation(prueba.getX(), prueba.getY());
         i=8;
            try {
-               System.out.println("GOLPE");
+               System.out.println("GOLPEAR");
                imagen img= new imagen(i);
                imagen clon=(imagen) img.clonar();
 
@@ -138,23 +138,60 @@ public lienzo(){
 
     @Override
     public void keyReleased(KeyEvent e) {
-        
+        int i=1;
+        imagen img= new imagen(i);
         if(e.getExtendedKeyCode()== KeyEvent.VK_UP){
-            prueba.setIcon(new ImageIcon(getClass().getResource("sprite1.png")));
+            try {               
+               imagen clon=(imagen) img.clonar();
+               clon.setIcono(i);
+               prueba.setIcon(clon.toIcon());
+               
+           } catch (CloneNotSupportedException ex) {
+               System.out.println("error");
+           }
+        
         }
         if(e.getExtendedKeyCode()== KeyEvent.VK_DOWN){
-            prueba.setIcon(new ImageIcon(getClass().getResource("sprite1.png")));
+          try {               
+               imagen clon=(imagen) img.clonar();
+               clon.setIcono(i);
+               prueba.setIcon(clon.toIcon());
+               
+           } catch (CloneNotSupportedException ex) {
+               System.out.println("error");
+           }
         }
         if(e.getExtendedKeyCode()== KeyEvent.VK_LEFT){
-            prueba.setIcon(new ImageIcon(getClass().getResource("sprite5.png")));
+            try {               
+               imagen clon=(imagen) img.clonar();
+               clon.setIcono(i);
+               prueba.setIcon(clon.toIcon());
+               
+           } catch (CloneNotSupportedException ex) {
+               System.out.println("error");
+           }
             
         }
         if(e.getExtendedKeyCode()== KeyEvent.VK_RIGHT){
-           prueba.setIcon(new ImageIcon(getClass().getResource("sprite1.png")));
+           try {               
+               imagen clon=(imagen) img.clonar();
+               clon.setIcono(i);
+               prueba.setIcon(clon.toIcon());
+               
+           } catch (CloneNotSupportedException ex) {
+               System.out.println("error");
+           }
         }
         if(e.getExtendedKeyCode()== KeyEvent.VK_SPACE){
             prueba.setLocation(prueba.getX() + 5, prueba.getY());
-            prueba.setIcon(new ImageIcon(getClass().getResource("sprite1.png")));
+           try {               
+               imagen clon=(imagen) img.clonar();
+               clon.setIcono(i);
+               prueba.setIcon(clon.toIcon());
+               
+           } catch (CloneNotSupportedException ex) {
+               System.out.println("error");
+           }
         }
              
               
